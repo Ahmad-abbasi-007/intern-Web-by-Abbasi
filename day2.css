@@ -1,0 +1,255 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --shadow: 0 40px 120px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, rgba(236, 79, 0, 0.07), transparent 18%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 24%),
+    linear-gradient(180deg, #f8f9fb 0%, #f4f5f7 45%, #eef1f5 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.75), transparent 20%);
+  pointer-events: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0 4rem;
+}
+
+.hero-left {
+  max-width: 560px;
+}
+
+.hero-logo {
+  width: 220px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h1 {
+  margin: 0;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  margin: 1.75rem 0 2.1rem;
+  max-width: 520px;
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.05rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.store-button img {
+  height: 3.4rem;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-screenshot {
+  width: min(100%, 640px);
+  border-radius: 2rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.feature-block.reverse {
+  direction: rtl;
+}
+
+.feature-block.reverse .feature-copy,
+.feature-block.reverse .feature-image {
+  direction: ltr;
+}
+
+.feature-copy {
+  max-width: 520px;
+}
+
+.section-label {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.feature-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.feature-image {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-image img {
+  width: min(100%, 560px);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  background: #ffffff;
+}
+
+.download-panel {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 0 auto 3rem;
+  max-width: 740px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.download-copy {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.download-actions {
+  justify-content: center;
+}
+
+.contact-copy {
+  margin: 1.5rem 0 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.contact-copy a {
+  color: #0f6fff;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.footer-logo {
+  width: 120px;
+  opacity: 0.85;
+}
+
+@media (max-width: 1040px) {
+  .hero-section,
+  .feature-block {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-block.reverse {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle,
+  .contact-copy,
+  .download-copy {
+    font-size: 1rem;
+  }
+
+  .store-button img {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-actions,
+  .download-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-screenshot,
+  .feature-image img,
+  .download-panel {
+    width: 100%;
+  }
+}
