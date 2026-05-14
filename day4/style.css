@@ -1,0 +1,332 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Roboto',sans-serif;
+  background:#fff;
+  color:#333;
+}
+
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+  url('https://picsum.photos/1600/900?11');
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 0;
+}
+
+.logo{
+  font-size:34px;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  gap:35px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#00c6ff;
+}
+
+.hero-content{
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-content h1{
+  font-size:70px;
+  margin-bottom:30px;
+}
+
+.search-box{
+  display:flex;
+  width:600px;
+  background:white;
+  overflow:hidden;
+  border-radius:5px;
+}
+
+.search-box input{
+  flex:1;
+  border:none;
+  padding:20px;
+  font-size:18px;
+  outline:none;
+}
+
+.search-box button{
+  width:80px;
+  border:none;
+  background:#0099cc;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* GALLERY */
+
+.gallery-section{
+  padding:90px 0;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:50px;
+}
+
+.section-header h2{
+  color:#0099cc;
+  font-size:40px;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.card{
+  width:280px;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+.card-content h3{
+  color:#0099cc;
+  margin-bottom:10px;
+}
+/* PAGINATION */
+
+.pagination-section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 0;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.page-btn{
+  padding:22px 45px;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+  border-radius:4px;
+  transition:.3s;
+}
+
+/* Previous Button */
+
+.prev-btn{
+  background:#69c7c8;
+  color:white;
+}
+
+.prev-btn:hover{
+  background:#58b6b7;
+}
+
+/* Next Button */
+
+.next-btn{
+  background:#0d7777;
+  color:white;
+  box-shadow:0 0 0 6px #b8d0ff;
+}
+
+.next-btn:hover{
+  background:#095f5f;
+}
+
+/* Page Numbers */
+
+.page-numbers{
+  display:flex;
+  gap:18px;
+}
+
+.page-numbers a{
+  width:70px;
+  height:70px;
+  background:#efefef;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  color:#999;
+  font-size:28px;
+  transition:.3s;
+}
+
+.page-numbers a.active{
+  background:#0fa4a5;
+  color:white;
+}
+
+.page-numbers a:hover{
+  background:#dcdcdc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .pagination-section{
+    flex-direction:column;
+  }
+
+  .page-btn{
+    width:100%;
+  }
+
+}
+
+/* ABOUT */
+
+.about-section{
+  background:#f5f5f5;
+  padding:100px 0;
+}
+
+.about-wrapper{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h2{
+  color:#0099cc;
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  margin-bottom:20px;
+  line-height:1.8;
+}
+
+.about-text button{
+  padding:15px 35px;
+  border:none;
+  background:#0099cc;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.about-image{
+  flex:1;
+}
+
+.about-image img{
+  width:100%;
+}
+
+/* FOOTER */
+
+.footer{
+  background:#222;
+  color:white;
+  padding:30px 0;
+}
+
+.footer-wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.social-links{
+  display:flex;
+  gap:20px;
+}
+
+.social-links a{
+  color:white;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+    text-align:center;
+  }
+
+  .search-box{
+    width:90%;
+  }
+
+  .about-wrapper{
+    flex-direction:column;
+  }
+
+  .footer-wrapper{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
