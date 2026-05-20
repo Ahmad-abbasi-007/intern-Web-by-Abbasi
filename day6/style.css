@@ -1,0 +1,72 @@
+/* --- GLOBAL STYLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: #f8fbff; }
+h1, h2 { font-family: 'Cormorant Garamond', serif; }
+.btn { padding: 12px 30px; background: #a5c3d4; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; border: none; cursor: pointer; }
+.btn:hover { background: #87abbf; }
+
+/* --- NAVIGATION --- */
+.navbar { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 400; }
+
+/* --- HERO --- */
+.hero { height: 80vh; background: url('https://images.unsplash.com/photo-1477601263568-180e2c6d046e?auto=format&fit=crop&q=80&w=2070') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-content h1 { font-size: 4rem; margin-bottom: 10px; }
+
+/* --- GALLERY --- */
+.gallery-container { padding: 80px 10%; }
+.filter-buttons { text-align: center; margin-bottom: 40px; }
+.filter-buttons button { background: none; border: 1px solid #ddd; padding: 8px 20px; margin: 5px; cursor: pointer; border-radius: 20px; }
+.filter-buttons button.active { background: #a5c3d4; color: white; border-color: #a5c3d4; }
+.masonry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid-item { background-size: cover; background-position: center; min-height: 300px; border-radius: 8px; }
+.item-tall { grid-row: span 2; }
+
+/* --- ABOUT & CONTACT --- */
+.about-section, .contact-section { padding: 100px 10%; text-align: center; }
+.stats { display: flex; justify-content: space-around; margin-top: 40px; }
+.contact-form { max-width: 600px; margin: 40px auto; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+
+/* ============================================================
+   1. LAPTOP VIEW (Large Screens: 1024px and above)
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+    .navbar { padding: 25px 10%; }
+    .hero-content h1 { font-size: 5rem; }
+    .masonry-grid { grid-template-columns: repeat(3, 1fr); } /* 3 Columns */
+    .about-section { display: flex; align-items: center; text-align: left; }
+    .about-content { flex: 1; }
+    .stats { justify-content: flex-start; gap: 50px; }
+}
+
+/* ============================================================
+   2. TABLET VIEW (Medium Screens: 768px to 1023px)
+   ============================================================ */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .navbar { padding: 20px 30px; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .gallery-container { padding: 50px 5%; }
+    .masonry-grid { grid-template-columns: repeat(2, 1fr); } /* 2 Columns */
+    .stats { flex-wrap: wrap; gap: 20px; }
+    .stat-box { flex: 1 1 40%; }
+}
+
+/* ============================================================
+   3. MOBILE VIEW (Small Screens: Under 767px)
+   ============================================================ */
+@media screen and (max-width: 767px) {
+    .navbar { flex-direction: column; padding: 15px; }
+    .nav-links { margin-top: 15px; }
+    .nav-links li { margin: 0 10px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 0.9rem; }
+    .masonry-grid { grid-template-columns: 1fr; } /* 1 Column */
+    .grid-item { min-height: 250px; }
+    .item-tall { grid-row: auto; } /* Remove tall items on mobile for better scrolling */
+    .stats { flex-direction: column; gap: 30px; }
+    .gallery-container { padding: 40px 20px; }
+    .about-section, .contact-section { padding: 60px 20px; }
+}
