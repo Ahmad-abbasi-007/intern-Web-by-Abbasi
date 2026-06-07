@@ -1,0 +1,6 @@
+{
+  "name": "Whitepace SaaS Landing Page",
+  "description": "A beautiful, fully-responsive clone of the Whitepace SaaS Landing Page styled with Bootstrap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Default font setups */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #212529;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+code, .mono-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Whitepace custom brand colors */
+.bg-whitepace-navy {
+  background-color: #043873 !important;
+}
+
+.text-whitepace-yellow {
+  color: #FFE492 !important;
+}
+
+.bg-whitepace-yellow {
+  background-color: #FFE492 !important;
+}
+
+.text-whitepace-blue {
+  color: #4F9CF9 !important;
+}
+
+.bg-whitepace-blue {
+  background-color: #4F9CF9 !important;
+}
+
+.border-whitepace-blue {
+  border-color: #4F9CF9 !important;
+}
+
+.bg-whitepace-skyblue {
+  background-color: #C4DEFD !important;
+}
+
+.text-whitepace-muted {
+  color: #b1cbe8 !important;
+}
+
+/* Custom interactive classes for UI polish */
+.hover-scale {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-whitepace-primary {
+  background-color: #4F9CF9 !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-whitepace-primary:hover {
+  background-color: #3b87e0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 156, 249, 0.3) !important;
+}
+
+.btn-whitepace-yellow {
+  background-color: #FFE492 !important;
+  color: #043873 !important;
+  border: none !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-whitepace-yellow:hover {
+  background-color: #ffd861 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 228, 146, 0.3) !important;
+}
+
+.btn-whitepace-outline-light {
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  transition: all 0.2s ease;
+}
+
+.btn-whitepace-outline-light:hover {
+  background-color: #ffffff !important;
+  color: #043873 !important;
+}
+
+.btn-whitepace-outline-dark {
+  border: 1px solid #043873 !important;
+  color: #043873 !important;
+  transition: all 0.2s ease;
+}
+
+.btn-whitepace-outline-dark:hover {
+  background-color: #043873 !important;
+  color: #ffffff !important;
+}
+
+/* Feature grid and dashboard mockup styles */
+.mock-window {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.mock-titlebar {
+  background-color: #eef2f6;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mock-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mock-iframe-like {
+  background: white;
+  min-height: 250px;
+}
