@@ -1,0 +1,6 @@
+{
+  "name": "StartUp Landing Page",
+  "description": "A highly polished, responsive clone of the Colorlib Startup2 landing page template, built with React, Motion, and Tailwind CSS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
