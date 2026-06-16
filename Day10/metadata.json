@@ -1,0 +1,6 @@
+{
+  "name": "Furniture E-Commerce",
+  "description": "A premium, highly-designed furniture e-commerce website featuring dynamic product list, category filtering, search, and a persistent shopping cart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

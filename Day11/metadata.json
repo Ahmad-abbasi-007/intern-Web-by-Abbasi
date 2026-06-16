@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio Website Builder",
+  "description": "Generate, edit, and export professional, fully responsive HTML/CSS/Bootstrap/JS portfolio websites. Preview your portfolio in real-time, customize theme choices, auto-generate bios and projects using Gemini AI, and export fully functional code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
