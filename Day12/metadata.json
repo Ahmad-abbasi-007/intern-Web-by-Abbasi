@@ -1,0 +1,6 @@
+{
+  "name": "To-Do List",
+  "description": "A fully functional To-Do List application with task management, completion tracking, subtasks, category tags, filters, search, edit capability, and local storage integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
